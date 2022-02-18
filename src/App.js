@@ -25,7 +25,7 @@ function App() {
  }
   return (
     <>
-<Navbar1 title="TextUtils" mode={mode} toggleMode = {toggleMode}/>
+<Navbar1 title="Text Modifier" mode={mode} toggleMode = {toggleMode}/>
 <Container>
 <TextForm heading="Enter text to analyze below" mode={mode} />
 </Container>

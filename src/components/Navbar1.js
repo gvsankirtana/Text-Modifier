@@ -6,7 +6,7 @@ export default function (props) {
   return (
     <Navbar bg={`${props.mode}`} expand="lg">
     <Container fluid>
-      <Navbar.Brand href="#">{props.title}</Navbar.Brand>
+      <Navbar.Brand href="#"><h4>{props.title}</h4></Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -14,19 +14,8 @@ export default function (props) {
           style={{ maxHeight: '100px' }}
           navbarScroll
        >
-          <Nav.Link href="#action1">Home</Nav.Link>
-          <Nav.Link href="#action2">Link</Nav.Link>
-          <NavDropdown title="Link" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action5">
-              Something else here
-            </NavDropdown.Item>
-          </NavDropdown>
-          <Nav.Link href="#" disabled>
-            Link
-          </Nav.Link>
+          <Nav.Link href="#action1"><h4>Home</h4></Nav.Link>
+          <Nav.Link href="#action2"><h4>About</h4></Nav.Link>
         </Nav>
   <Form className={`text-${props.mode === 'light' ? 'dark' : 'light' }`}>
   <Form.Check 

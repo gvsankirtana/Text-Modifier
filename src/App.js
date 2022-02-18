@@ -16,7 +16,7 @@ function App() {
  const toggleMode = () => {
     if(mode === 'light'){
       setMode('dark');
-      document.body.style.backgroundColor = 'grey';
+      document.body.style.backgroundColor = '#042048';
  }
     else{
       setMode('light');

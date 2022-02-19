@@ -6,7 +6,7 @@ export default function (props) {
   return (
     <Navbar bg={`${props.mode}`} expand="md">
     <Container fluid>
-      <Navbar.Brand href="/"><h3>{props.title}</h3></Navbar.Brand>
+      <Navbar.Brand href="/"><h2>{props.title}</h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav className="me-auto my-3" navbarScroll>
@@ -15,7 +15,7 @@ export default function (props) {
   <Form.Check 
     type="switch"
     id="custom-switch text-light"
-    label=" Enable Dark Mode"
+    label="Enable Dark Mode"
     onClick={props.toggleMode}
   />
   </Form>

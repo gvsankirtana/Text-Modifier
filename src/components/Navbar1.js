@@ -1,12 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar,Nav,NavDropdown,Form,FormControl,Container} from 'react-bootstrap';
+import {Navbar,Nav,Form,Container} from 'react-bootstrap';
 export default function (props) {
   return (
-    <Navbar bg={`${props.mode}`} expand="lg">
+    <Navbar bg={`${props.mode}`} expand="md">
     <Container fluid>
-      <Navbar.Brand href="#"><h4>{props.title}</h4></Navbar.Brand>
+      <Navbar.Brand href="#"><h5>{props.title}</h5></Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -30,8 +30,8 @@ export default function (props) {
   </Navbar>
   )
 }
-Navbar.PropTypes = {title:PropTypes.string.isRequired}
+Navbar.propTypes = {title:propTypes.string.isRequired}
 Navbar.defaultProps = {
   title: 'Set title here',
-  aboutText : 'About text here'
+  abouttext : 'About text here'
 };

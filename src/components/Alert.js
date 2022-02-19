@@ -1,16 +1,13 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar,Nav,NavDropdown,Form,FormControl,Container,Alert} from 'react-bootstrap';
-export default function (props) {
+function Alert(props) {
+  const capitalize = (word) => {
+    const lower = word.toLowerCase();
+    return lower.charAt(0).toUpperCase() + lower.slice(1);
+  }
   return (
-    {props.Alert && <Alert variant={props.alert.type}>
-    <Alert.Heading>Dark mode enabled</Alert.Heading>
-    <p>
-      {props.alert.msg}
-    </p>
-    <hr />
-    <div className="d-flex justify-content-end">
-    </div>
-  </Alert>
+    props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible`} role="alert">
+  <strong>{capitalize(props.alert.type)}</strong> : {props.alert.msg}
+</div>
   )
 }
+export default Alert

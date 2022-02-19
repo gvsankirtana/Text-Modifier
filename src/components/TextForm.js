@@ -2,20 +2,20 @@
  import 'bootstrap/dist/css/bootstrap.css';
 import { Button,Form,Container} from 'react-bootstrap';
 export default function TextForm(props) {
-  const handleUpClick = (props) =>{
+  const handleUpClick = () =>{
     let newText = text.toUpperCase();
     setText(newText);
-    props.showAlert("Converted to uppercase!","success");
+    props.showAlert("Converted to Uppercase!","success");
   }
   const handleLoClick = () =>{
     let newText = text.toLowerCase();
     setText(newText);
-    props.showAlert("Converted to lowercase!","success");
+    props.showAlert("Converted to Lowercase!","success");
   }
   const handleClearClick = () =>{
     let newText = '';
     setText(newText);
-    props.showAlert("Text Cleared!","success");
+    props.showAlert("Text cleared!","success");
   }
   const handleCopyClick = () =>{ 
     var text = document.getElementById("myBox");
@@ -26,7 +26,7 @@ export default function TextForm(props) {
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
-    props.showAlert("Removed extra spaces!","success");
+    props.showAlert("Removed Extra spaces!","success");
   }
   const handleOnChange = (event) =>{ 
     setText(event.target.value);

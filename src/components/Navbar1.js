@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar,Nav,Form,Container} from 'react-bootstrap';
 export default function (props) {
   return (
-    <Navbar bg={`${props.mode}`} expand="md">
+    <Navbar bg={`${props.mode}`} expand = "md">
     <Container fluid>
       <Navbar.Brand href="/"><h2>{props.title}</h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />

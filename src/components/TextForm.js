@@ -1,6 +1,7 @@
  import React,{useState} from 'react'
  import 'bootstrap/dist/css/bootstrap.css';
 import { Button,Form,Container} from 'react-bootstrap';
+import '../App.css';
 export default function TextForm(props) {
   const handleUpClick = () =>{
     let newText = text.toUpperCase();
@@ -31,7 +32,7 @@ export default function TextForm(props) {
   const handleOnChange = (event) =>{ 
     setText(event.target.value);
   }
-  const[text,setText] = useState('Enter Text Here');  
+  const[text,setText] = useState('');  
  // text = "new text";//wrong way to change the state
  // setText("new Text");//correct way to change the state
   return (
@@ -51,10 +52,12 @@ export default function TextForm(props) {
 </Container>
 <Container className='my-3' style = {{ backgroundColor: props.mode === 'light'?'white':'#042048',color: props.mode === 'dark'?'white':'black'}}>
 <h2>Your text summary</h2>
-<p>{text.split(" ").length} words and {text.length} characters</p>
-<p>{0.008 * text.length} Minutes read</p>
+{!text && <h6 className='my-3' style={{color: "red"}}>Enter something in the text box above to get summary</h6>}
+{text && <h6 className='my-3'>{text.split(" ").length} words and {text.length} characters</h6>}
+{text && <h6 className='my-3'>{0.008 * text.length} Minutes read</h6>}
 <h2>Preview</h2>
-<p>{text.length>0?text:"Enter something in the text box above to preview it here"}</p>
+{!text && <h6 className='my-3' style={{color: "red"}}>Enter something in the text box above to preview it here</h6>}
+{text && <h6 className='my-3'>{text}</h6>}
 </Container>
 </>
    )

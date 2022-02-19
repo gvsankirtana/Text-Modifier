@@ -6,16 +6,10 @@ export default function (props) {
   return (
     <Navbar bg={`${props.mode}`} expand="md">
     <Container fluid>
-      <Navbar.Brand href="#"><h5>{props.title}</h5></Navbar.Brand>
+      <Navbar.Brand href="/"><h3>{props.title}</h3></Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
-        <Nav
-          className="me-auto my-2 my-lg-0"
-          style={{ maxHeight: '100px' }}
-          navbarScroll
-       >
-          <Nav.Link href="#action1"><h4>Home</h4></Nav.Link>
-          <Nav.Link href="#action2"><h4>About</h4></Nav.Link>
+        <Nav className="me-auto my-3" navbarScroll>
         </Nav>
   <Form className={`text-${props.mode === 'light' ? 'dark' : 'light' }`}>
   <Form.Check 

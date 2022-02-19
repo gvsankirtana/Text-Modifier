@@ -4,7 +4,14 @@ import {Container} from 'react-bootstrap';
 import Navbar1 from './components/Navbar1';
 import TextForm from './components/TextForm';
 import  Alert from './components/Alert';
+import About from './components/About';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 //const Container = Styled.Text;
 /*JSX pointer
 1) use curly brackets for using js
@@ -43,9 +50,13 @@ function App() {
     <>
 <Navbar1 title="Text Modifier" mode={mode} toggleMode = {toggleMode}/>
 <Alert alert = {alert}/>
+<Router>
 <Container>
-<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />
+   <Routes>
+      <Route  exact path='/' element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />}/>
+    </Routes>
 </Container>
+</Router>
     </>
   );
 }

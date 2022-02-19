@@ -53,7 +53,7 @@ function App() {
 <Router>
 <Container>
    <Routes>
-      <Route  exact path='/' element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />}/>
+      <Route  exact path='/' element={<TextForm showAlert={showAlert} heading="Text Modifier - Word counter, Character counter, Remove extra spaces" mode={mode} />}/>
     </Routes>
 </Container>
 </Router>

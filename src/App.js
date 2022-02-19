@@ -32,7 +32,7 @@ function App() {
       setAlert(null);
     },1500);
  }
-  const toggleMode = () => {
+  const toggleMode = (props) => {
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = '#042048';

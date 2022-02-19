@@ -6,12 +6,14 @@ export default function TextForm(props) {
   const handleUpClick = () =>{
     let newText = text.toUpperCase();
     setText(newText);
-    props.showAlert("Converted to Uppercase!","success");
+    text&&props.showAlert("Converted to Uppercase!","success");
+    !text&&props.showAlert("Please Enter Text","danger");
   }
   const handleLoClick = () =>{
     let newText = text.toLowerCase();
     setText(newText);
-    props.showAlert("Converted to Lowercase!","success");
+    text&&props.showAlert("Converted to Lowercase!","success");
+    !text&&props.showAlert("Please Enter Text","danger");
   }
   const handleClearClick = () =>{
     let newText = '';
@@ -27,7 +29,8 @@ export default function TextForm(props) {
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
-    props.showAlert("Removed Extra spaces!","success");
+    text&&props.showAlert("Removed Extra spaces!","success");
+    !text&&props.showAlert("Please Enter Text","danger");
   }
   const handleOnChange = (event) =>{ 
     setText(event.target.value);
